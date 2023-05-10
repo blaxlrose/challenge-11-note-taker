@@ -20,3 +20,14 @@ app.get("/notes", (req, res) => {
 app.get(`/api/notes`, (req, res) => {
    res.json(notes);
  });
+
+// post request 
+app.post(`/api/notes`, (req, res) => {
+    notes.push(req.body)
+    res.json(notes)
+    });
+    
+//port listener
+app.listen(PORT, () => {
+    console.log(`start!`)
+    });
